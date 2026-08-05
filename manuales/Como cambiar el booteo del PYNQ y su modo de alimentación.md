@@ -6,7 +6,7 @@
 
     Aspecto: Es un conjunto de 4 pares de pines horizontales etiquetados con opciones como SD, QSPI y JTAG.
 
-    Cómo configurarlo: Para arrancar la placa desde la tarjeta MicroSD, debes colocar el puente plástico (jumper block) conectando los dos pines bajo la etiqueta SD.
+    Cómo configurarlo: Para arrancar la placa desde la tarjeta MicroSD, debes colocar el puente plástico (jumper block) conectando los dos pines bajo la etiqueta SD. ![Imagen](./imagenes/jumper01.png)
 
 # 2.  Jumper de Alimentación (J9 / JP7 - Power Select)
 
@@ -18,4 +18,4 @@
 
         Modo USB: Si vas a alimentar la placa directamente usando el cable Micro-USB conectado a tu computadora o cargador, coloca el puente plástico uniendo los pines marcados como USB.
 
-        Modo REG: Si vas a usar una fuente de alimentación externa conectada al jack DC (transformador de pared), coloca el puente plástico en la posición REG.
+        Modo REG: Si vas a usar una fuente de alimentación externa conectada al jack DC (transformador de pared), coloca el puente plástico en la posición REG. ![Imagen](./imagenes/jumper7y9.png)
