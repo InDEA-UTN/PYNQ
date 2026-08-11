@@ -8,7 +8,7 @@ para leerse de corrido.
 
 | Manual | Contenido | Estado |
 |--------|-----------|--------|
-| Cambiar el booteo del PYNQ y su alimentacion |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ |Subido|
+| Cómo cambiar el booteo del PYNQ y su alimentacion |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ |En revisión|
 
 ## Qué debe tener un manual
 

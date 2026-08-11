@@ -8,7 +8,7 @@ Una vez encendida la placa **PYNQ-Z2** con el sistema operativo inicializado, el
 
 Existen dos topologías principales para conectar la PYNQ-Z2 a tu computadora:
 
-### Opción A: Conexión vía Router/Switch (Red Local - Recomendado)
+### Opción A: Conexión vía Router/Switch
 1. Conecta el cable Ethernet desde la PYNQ-Z2 a un puerto LAN de tu router.
 2. Tu PC debe estar conectada a la misma red (por Wi-Fi o cable).
 3. El servidor DHCP del router le asignará automáticamente una dirección IP a la placa.
@@ -34,7 +34,7 @@ Existen dos topologías principales para conectar la PYNQ-Z2 a tu computadora:
      ```
    * **Por dirección IP dinámica (asignada por DHCP):**
      ```text
-     http://<IP_ASIGNADA_POR_ROUTER>:9090
+     http://<IP_ASIGNADA_POR_ROUTER>:9090 (se puede obtener a través del programa Identificador PYNQ)
      ```
 3. **Autenticación:**
    * **Contraseña por defecto:** `xilinx`

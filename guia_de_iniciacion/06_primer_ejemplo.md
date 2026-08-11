@@ -6,7 +6,7 @@ En este módulo realizaremos la creación y ejecución de un Notebook en Jupyter
 
 ## 1. Crear un Nuevo Notebook
 
-1. Ingresa a la interfaz de Jupyter Notebook desde tu navegador (`http://pynq:9090` o `http://192.168.2.99:9090`).
+1. Ingresa a la interfaz de Jupyter Notebook desde tu navegador
 2. En la esquina superior derecha, haz clic en **New** -> **Python 3 (ipykernel)**.
 3. Renombra el notebook como `01_primer_ejemplo.ipynb`.
 
@@ -53,7 +53,7 @@ print("Ejecución finalizada.")
 
 ---
 
-## 3. Explicación Detallada: ¿Qué ocurrió bajo el capó?
+## 3. Explicación Detallada:
 
 Para entender el flujo completo de este ejemplo, desglosaremos lo que ocurrió desde la celda de Python hasta la respuesta del silicio:
 
