@@ -1,4 +1,4 @@
-# 6. Guía Rápida de Uso: Jupyter Notebook en PYNQ-Z2
+# 5. Guía Rápida de Uso: Jupyter Notebook en PYNQ-Z2
 
 Esta guía cubre el funcionamiento básico de la interfaz de **Jupyter Notebook**, pensada para que cualquier usuario pueda desenvolverse con fluidez sin depender de experiencia previa con el entorno.
 

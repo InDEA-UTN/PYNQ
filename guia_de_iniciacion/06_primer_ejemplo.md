@@ -1,4 +1,4 @@
-# 05. Primer Ejemplo: Ejecución de punta a punta y Análisis Técnico
+# 06. Primer Ejemplo: Ejecución de punta a punta y Análisis Técnico
 
 En este módulo realizaremos la creación y ejecución de un Notebook en Jupyter para interactuar por primera vez con los periféricos de la **PYNQ-Z2** controlados desde la FPGA. Analizaremos paso a paso el código Python y lo que sucede a nivel de hardware.
 
