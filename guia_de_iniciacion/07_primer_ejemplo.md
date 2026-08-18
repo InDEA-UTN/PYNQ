@@ -1,4 +1,4 @@
-# 06. Primer Ejemplo: Ejecución de punta a punta y Análisis Técnico
+# 07. Primer Ejemplo: Ejecución de punta a punta y Análisis Técnico
 
 En este módulo realizaremos la creación y ejecución de un Notebook en Jupyter para interactuar por primera vez con los periféricos de la **PYNQ-Z2** controlados desde la FPGA. Analizaremos paso a paso el código Python y lo que sucede a nivel de hardware.
 
@@ -57,8 +57,13 @@ print("Ejecución finalizada.")
 
 Para entender el flujo completo de este ejemplo, desglosaremos lo que ocurrió desde la celda de Python hasta la respuesta del silicio:
 
-```text
-[ Python / Jupyter ]  -->  [ Librería PYNQ (MMIO) ]  -->  [ Kernel Linux ]  -->  [ Bus AXI-Lite ]  -->  [ IP Core AXI GPIO (FPGA) ]  -->  [ Pin Físico / LED ]
+```mermaid
+graph LR
+    A["Python / Jupyter"] --> B["Librería PYNQ (MMIO)"]
+    B --> C["Kernel Linux"]
+    C --> D["Bus AXI-Lite"]
+    D --> E["IP Core AXI GPIO (FPGA)"]
+    E --> F["Pin Físico / LED"]
 ```
 
 ### Paso 1: Carga del Bitstream (`BaseOverlay('base.bit')`)
@@ -99,3 +104,7 @@ rgb_led.write(0) # Apagar
 ## 5. Conclusiones
 * **Sin escribir VHDL/Verilog**, hemos reconfigurado la FPGA y tomado control en tiempo real de sus terminales de entrada/salida.
 * Toda la comunicación entre el procesador ARM y la FPGA ocurre de forma transparente mediante el bus estándar industrial **AXI4-Lite** y mapas de memoria administrados por Python.
+
+---
+
+[← Anterior: 06. Guía Jupyter](./06_guia_jupyter.md) | [Siguiente: 08. Flujo de trabajo →](./08_flujo_de_trabajo.md)

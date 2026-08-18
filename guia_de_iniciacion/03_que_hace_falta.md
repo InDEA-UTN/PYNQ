@@ -44,10 +44,4 @@ Para comenzar a trabajar con la placa **PYNQ-Z2**, es necesario contar con una s
 
 ---
 
-## 3. Checklist Antes de Empezar
-
-- [ ] Tarjeta MicroSD flasheada con la imagen oficial de PYNQ.
-- [ ] Jumper de arranque (`JP1`) configurado en la posición **SD**.
-- [ ] Jumper de alimentación (`JP7`) configurado según la fuente elegida (**USB** o **REG**).
-- [ ] Cable Ethernet conectado entre la PYNQ-Z2 y la PC / Router.
-- [ ] Placa alimentada y LEDs de estado encendidos (`DONE` iluminado tras el arranque).
+[← Anterior: 02. Conceptos claves PYNQ](./02_conceptos_claves_pynq.md) | [Siguiente: 04. Preparar la placa →](./04_preparar_la_placa.md)

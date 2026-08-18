@@ -1,4 +1,4 @@
-# 03. Preparar la Placa: Grabado de Imagen, Configuración de Jumpers y Primer Encendido
+# 04. Preparar la Placa: Grabado de Imagen, Configuración de Jumpers y Primer Encendido
 
 En este apartado se detalla el procedimiento paso a paso para preparar la tarjeta MicroSD, configurar correctamente los *jumpers* de hardware de la **PYNQ-Z2** y realizar el primer encendido exitoso de la placa.
 
@@ -62,7 +62,6 @@ Al encender la placa, se debe observar la siguiente secuencia en los LEDs integr
 2. **DONE LED (`LD12` / Green):** Después de unos segundos (~5-10 s), el LED **DONE** se ilumina en verde. Esto confirma que la lógica reconfigurable (FPGA) cargó exitosamente el *bitstream* base.
 3. **LEDs de actividad del procesador:** Los LEDs de usuario o del puerto Ethernet parpadearán indicando el arranque del kernel de Linux Ubuntu y la inicialización de los servicios de Jupyter Notebook (el proceso completo toma alrededor de 30 a 45 segundos).
 
----
 
 ## Diagnóstico Rápido de Problemas (Troubleshooting)
 
@@ -72,3 +71,7 @@ Al encender la placa, se debe observar la siguiente secuencia en los LEDs integr
   * Re-flashear la imagen en la tarjeta MicroSD usando BalenaEtcher.
 * **La placa se reinicia intermitentemente:**
   * Si se alimenta por USB, la PC o puerto USB puede no estar entregando la corriente suficiente (mínimo 2A-3A). Cambiar a un cargador de pared dedicado o usar una fuente jack DC de 5V (jumper `JP7` en **REG**).
+
+---
+
+[← Anterior: 03. Que hace falta](./03_que_hace_falta.md) | [Siguiente: 05. Conectarse →](./05_conectarse.md)

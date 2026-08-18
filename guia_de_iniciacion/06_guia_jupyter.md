@@ -1,4 +1,4 @@
-# 5. Guía Rápida de Uso: Jupyter Notebook en PYNQ-Z2
+# 6. Guía Rápida de Uso: Jupyter Notebook en PYNQ-Z2
 
 Esta guía cubre el funcionamiento básico de la interfaz de **Jupyter Notebook**, pensada para que cualquier usuario pueda desenvolverse con fluidez sin depender de experiencia previa con el entorno.
 
@@ -13,7 +13,9 @@ Para acceder desde tu navegador web:
 2. Ingresa la dirección correspondiente en la barra de direcciones:
    * **Por IP fija (Conexión directa):** `http://192.168.2.99:9090`
    * **Por nombre mDNS:** `http://pynq:9090`
-   * **Por programa "Identificador PYNQ":** Haga doble click sobre el archivo en el escritorio llamado Identificador PYNQ y déjelo corriendo. Cuando la placa se conecte a la red, le llegará una notificación en el escritorio de que el PYNQ está listo y solo debe hacer click en el link que sale en la notificación. Finalmente, ya puede cerrar el programa. ![Imagen](./imagenes/notificacion.png)
+   * **Por programa "Identificador PYNQ":** Haga doble click sobre el archivo en el escritorio llamado Identificador PYNQ y déjelo corriendo. Cuando la placa se conecte a la red, le llegará una notificación en el escritorio de que el PYNQ está listo y solo debe hacer click en el link que sale en la notificación. Finalmente, ya puede cerrar el programa.
+
+   ![Imagen](./imagenes/notificacion.png)
 3. Cuando solicite clave, ingresa la contraseña por defecto: `xilinx`.
 
 ---
@@ -82,3 +84,7 @@ El **Kernel** es el motor de Python que corre de fondo en la placa procesando el
    * Ve al menú `Kernel` -> `Restart`. Esto limpia la memoria del procesador (las variables dejan de existir), pero no borra el texto ni el código escrito. Ideal cuando quieras empezar de cero.
 3. **Reiniciar y ejecutar todo:**
    * Ve al menú `Kernel` -> `Restart & Run All`. Reinicia la memoria y ejecuta de forma secuencial todas las celdas desde la primera hasta la última.
+
+---
+
+[← Anterior: 05. Conectarse](./05_conectarse.md) | [Siguiente: 07. Primer ejemplo →](./07_primer_ejemplo.md)

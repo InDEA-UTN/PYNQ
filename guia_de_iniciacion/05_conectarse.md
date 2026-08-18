@@ -1,4 +1,4 @@
-# 04. Conectarse a la Placa: Red y Acceso a Jupyter Notebook
+# 05. Conectarse a la Placa: Red y Acceso a Jupyter Notebook
 
 Una vez encendida la placa **PYNQ-Z2** con el sistema operativo inicializado, el siguiente paso es conectarse a ella a través de la red para acceder al entorno de desarrollo web **Jupyter Notebook** o por línea de comandos mediante **SSH** y **UART**.
 
@@ -89,3 +89,7 @@ Si usas router y `http://pynq:9090` no resuelve:
 ### Diagnóstico 4: Conflicto de Firewall / Antivirus
 * Asegúrate de que el puerto `9090` no esté bloqueado por el Firewall de Windows o antivirus de tu PC.
 * Prueba agregar la regla de entrada o desactivar temporalmente el firewall para verificar.
+
+---
+
+[← Anterior: 04. Preparar la placa](./04_que_es_pynq.md) | [Siguiente: 06. Guía Jupyter →](./06_guia_jupyter.md)
