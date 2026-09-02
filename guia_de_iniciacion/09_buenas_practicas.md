@@ -72,4 +72,4 @@ Los archivos .ipynb de Jupyter guardan no solo el código, sino también salidas
 ```
 ---
 
-[← Anterior: 08. Flujo de trabajo, persistencia y Git](./01_flujo_de_trabajo.md)
+[← Anterior: 08. Flujo de trabajo, persistencia y Git](./08_flujo_de_trabajo.md)

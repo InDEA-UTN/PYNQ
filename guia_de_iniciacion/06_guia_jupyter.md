@@ -9,11 +9,11 @@ Esta guía cubre el funcionamiento básico de la interfaz de **Jupyter Notebook*
 Un **Jupyter Notebook** es un documento interactivo que combina código ejecutable en Python, texto explicativo (en formato Markdown), imágenes y ecuaciones en un solo lugar.
 
 Para acceder desde tu navegador web:
-1. Asegúrate de estar conectado a la red de la placa (vía Ethernet o Router).
+1. Asegurate de estar conectado a la red de la placa (vía Ethernet o Router).
 2. Ingresa la dirección correspondiente en la barra de direcciones:
    * **Por IP fija (Conexión directa):** `http://192.168.2.99:9090`
    * **Por nombre mDNS:** `http://pynq:9090`
-   * **Por programa "Identificador PYNQ":** Haga doble click sobre el archivo en el escritorio llamado Identificador PYNQ y déjelo corriendo. Cuando la placa se conecte a la red, le llegará una notificación en el escritorio de que el PYNQ está listo y solo debe hacer click en el link que sale en la notificación. Finalmente, ya puede cerrar el programa.
+   * **Por programa "Identificador PYNQ":** Abrí el programa llamado Identificador PYNQ ubicado en el escritorio y dejálo corriendo. Cuando la placa se conecte a la red, te llegará una notificación en el escritorio de que el PYNQ está listo. Solo tenés que hacer click en la IP que aparece en la notificación. Despues de esto, el programa lo podés cerrar.
 
    ![Imagen](./imagenes/notificacion.png)
 3. Cuando solicite clave, ingresa la contraseña por defecto: `xilinx`.
@@ -24,9 +24,9 @@ Para acceder desde tu navegador web:
 
 Al ingresar, verás el administrador de archivos del sistema Linux de la placa:
 ![Imagen](./imagenes/iniciojupyter.png)
-* **Navegación:** Puedes hacer clic en las carpetas para explorarlas (por ejemplo, la carpeta `base` contiene ejemplos oficiales de la PYNQ).
-* **Crear un nuevo notebook:** En la esquina superior derecha, haz clic en **New** -> **Python 3 (ipykernel)**.
-* **Renombrar un notebook:** Dentro de un notebook, haz clic sobre el título (por defecto dice *Untitled*) en la parte superior izquierda y asigna el nombre deseado.
+* **Navegación:** Podés hacer clic en las carpetas para explorarlas (por ejemplo, la carpeta `base` contiene ejemplos oficiales de la PYNQ).
+* **Crear un nuevo notebook:** En la esquina superior derecha, hacé clic en **New** -> **Python 3 (ipykernel)**.
+* **Renombrar un notebook:** Dentro de un notebook, hacé clic sobre el título (por defecto dice *Untitled*) en la parte superior izquierda y asigna el nombre deseado.
 
 ---
 
@@ -40,7 +40,7 @@ Un notebook se organiza en **celdas de trabajo**. Existen dos tipos principales 
    **Ejemplo** ![Imagen](./imagenes/bloques1.png)
 2. **Celdas de Texto (`Markdown`):**
    * Sirven para escribir documentación, títulos, listas y explicaciones.
-   * Puedes cambiar el tipo de celda seleccionándola y usando el menú desplegable en la barra de herramientas superior (cambiando entre *Code* y *Markdown*).
+   * Podés cambiar el tipo de celda seleccionándola y usando el menú desplegable en la barra de herramientas superior (cambiando entre *Code* y *Markdown*).
    **Ejemplo** ![Imagen](./imagenes/bloques2.png)
 
 ---
@@ -54,7 +54,7 @@ A diferencia de un script de Python tradicional que se ejecuta de arriba a abajo
 * **`In [*]:`** (Asterisco): La celda está **en proceso de ejecución**. Si estás cargando un Overlay grande (como `base.bit`), el asterisco indicará que el procesador está trabajando.
 * **`In [1]:`** (Número): La celda **ya se ejecutó**. El número indica el orden secuencial de ejecución en el kernel.
 
-> **Regla de oro:** El orden en que ejecutas las celdas importa. Si la Celda 2 usa una variable que se creó en la Celda 1, **debes ejecutar la Celda 1 primero**, de lo contrario obtendrás un error de tipo `NameError`.
+> **Regla de oro:** El orden en que ejecutás las celdas importa. Si la Celda 2 usa una variable que se creó en la Celda 1, **tenés ejecutar la Celda 1 primero**, de lo contrario obtendrás un error de tipo `NameError`.
 
 ---
 
@@ -79,9 +79,9 @@ Aprender estos atajos acelera drásticamente el flujo de trabajo:
 El **Kernel** es el motor de Python que corre de fondo en la placa procesando el código. Si tu código entra en un bucle infinito o las variables se vuelven inestables:
 
 1. **Interrumpir ejecución (Detener):**
-   * Haz clic en el botón de **Stop (cuadrado negro)** en la barra superior o ve al menú `Kernel` -> `Interrupt`. Detiene la celda que esté corriendo en ese momento.
+   * Hacé clic en el botón de **Stop (cuadrado negro)** en la barra superior o ve al menú `Kernel` -> `Interrupt`. Detiene la celda que esté corriendo en ese momento.
 2. **Reiniciar Kernel (Borrar memoria):**
-   * Ve al menú `Kernel` -> `Restart`. Esto limpia la memoria del procesador (las variables dejan de existir), pero no borra el texto ni el código escrito. Ideal cuando quieras empezar de cero.
+   * Ve al menú `Kernel` -> `Restart`. Esto limpia la memoria del procesador (las variables dejan de existir), pero no borra el texto ni el código escrito. Ideal cuando necesitás empezar de cero.
 3. **Reiniciar y ejecutar todo:**
    * Ve al menú `Kernel` -> `Restart & Run All`. Reinicia la memoria y ejecuta de forma secuencial todas las celdas desde la primera hasta la última.
 

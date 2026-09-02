@@ -40,8 +40,7 @@ Los Overlays se pueden pensar como si fueran librerias en C (por ejemplo, stdio.
 ### Componentes Clave
 
 1. **Linux Embebido y Jupyter Server:** La placa ejecuta una distribución de Ubuntu Linux sobre los núcleos ARM del *Processing System* (PS). En este entorno corre un servidor de **Jupyter Notebook**, permitiendo programar, iterar y visualizar resultados desde un navegador web.
-2. **Concepto de *Overlay*:** Un *Overlay* es un diseño de hardware compilado que consta de un archivo de configuración de la FPGA (`.bit`) y metadatos (`.hwh`). Los Overlays se pueden pensar como si fueran librerias en C (por ejemplo, stdio.h o math.h) pero que en vez de describir funciones, describen el funcionamiento de un sistema electronico digital. 
-3. **Librería de Python (`pynq`):** Proporciona la API para interactuar con la FPGA desde Python:
+2. **Librería de Python (`pynq`):** Proporciona la API para interactuar con la FPGA desde Python:
    * Cargar bitstreams dinámicamente (`overlay = Overlay('design.bit')`).
    * Acceder a registros e interrupciones mediante variables y métodos directos.
    * Transferir arreglos de datos a alta velocidad mediante DMA (*Direct Memory Access*) e interfaces AXI.
@@ -93,3 +92,7 @@ print("Procesamiento completado en hardware.")
 
 * **Desarrolladores de Software y Científicos de Datos:** Permite acelerar algoritmos de procesamiento de señales (DSP), visión artificial y aprendizaje automático aprovechando la lógica reconfigurable sin necesidad de dominar sintaxis VHDL/Verilog ni flujos de síntesis de hardware.
 * **Diseñadores de Hardware:** Permite modularizar y empaquetar bloques IP como componentes reutilizables en Python, facilitando la integración, verificación y distribución de aceleradores a equipos de software.
+
+---
+
+[Siguiente: 02. Conceptos claves sobre la PYNQ →](./02_conceptos_claves_pynq.md)

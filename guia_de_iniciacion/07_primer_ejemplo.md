@@ -6,15 +6,15 @@ En este módulo realizaremos la creación y ejecución de un Notebook en Jupyter
 
 ## 1. Crear un Nuevo Notebook
 
-1. Ingresa a la interfaz de Jupyter Notebook desde tu navegador
-2. En la esquina superior derecha, haz clic en **New** -> **Python 3 (ipykernel)**.
-3. Renombra el notebook como `01_primer_ejemplo.ipynb`.
+1. Ingresá a la interfaz de Jupyter Notebook desde tu navegador
+2. En la esquina superior derecha, hacé clic en **New** -> **Python 3 (ipykernel)**.
+3. Renombrá el notebook como `01_primer_ejemplo.ipynb`.
 
 ---
 
 ## 2. Código Completo del Ejemplo (Parpadeo e Interacción de LEDs)
 
-Copia y ejecuta las siguientes celdas de código en tu notebook:
+Copiá y ejecutá las siguientes celdas de código en tu notebook:
 
 ### Celda 1: Importación y carga del Overlay Base
 ```python
@@ -67,9 +67,9 @@ graph LR
 ```
 
 ### Paso 1: Carga del Bitstream (`BaseOverlay('base.bit')`)
-1. La función `BaseOverlay` invoca al driver de PYNQ en Linux para reprogramar la FPGA a través de la interfaz **DevC / ICAP** (*Internal Configuration Access Port*).
-2. Se envía el archivo binario `.bit` a la *Programmable Logic* (PL). El LED **DONE (`LD12`)** confirma que las puertas lógicas se configuraron.
-3. PYNQ lee el archivo de metadatos `.hwh` e instanció internamente los controladores para el mapa de memoria AXI.
+1. La función `BaseOverlay` invoca al driver de PYNQ en Linux para reprogramar la FPGA desde el sistema procesador (PS) a través de la interfaz **DevC / PCAP** (*Processor Configuration Access Port*).
+2. Se envía el archivo binario `.bit` a la *Programmable Logic* (PL) vía DMA. El LED **DONE (`CR7`)** se ilumina en verde para confirmar que la lógica reconfigurable finalizó su configuración.
+3. PYNQ lee el archivo de metadatos `.hwh` e instancia internamente los controladores para el mapa de memoria AXI.
 
 ### Paso 2: Abstracción de Objetos (`base.leds[0]`, `base.switches[0]`)
 * Los LEDs y Switches no están conectados directamente al procesador ARM (PS), sino a pines de la FPGA (PL).
@@ -84,7 +84,7 @@ graph LR
 
 ## 4. Experimento Adicional: Control de LEDs RGB
 
-Prueba este bloque adicional para controlar el LED RGB integrado (`LD4` o `LD5`):
+Probá este bloque adicional para controlar el LED RGB integrado (`LD4` o `LD5`):
 
 ```python
 # Instancia del LED RGB 4

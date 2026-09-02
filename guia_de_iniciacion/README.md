@@ -8,11 +8,13 @@ numerado para que el orden de lectura sea evidente.
 | # | Documento | Qué cubre | Estado |
 |---|-----------|-----------|--------|
 | 01 | `01_que_es_pynq.md` | Qué es la placa, qué tiene adentro y para qué la usamos en el laboratorio. | Pendiente |
-| 02 | `02_que_hace_falta.md` | Hardware, fuente, tarjeta SD, cables y software necesarios antes de empezar. | Pendiente |
-| 03 | `03_preparar_la_placa.md` | Grabar la imagen en la tarjeta SD, jumpers de arranque y primer encendido. | Pendiente |
-| 04 | `04_conectarse.md` | Conexión por red y acceso a Jupyter; qué hacer si no aparece. | Pendiente |
-| 05 | `05_guia_jupyter.md` | Introducción a Jupyter Notebook. Cómo ingresar a el y cómo usarlo | Pendiente |
-| 06 | `06_primer_ejemplo.md` | Correr el primer notebook de punta a punta y entender qué pasó. | Pendiente |
+| 02 | `02_conceptos_claves_pynq.md` | Arquitectura Zynq (PS/PL), Overlays (.bit/.hwh), gestión de memoria CMA (pynq.allocate) y drivers. | Pendiente |
+| 03 | `03_que_hace_falta.md` | Hardware, fuente, tarjeta SD, cables y software necesarios antes de empezar. | Pendiente |
+| 04 | `04_preparar_la_placa.md` | Grabar la imagen en la tarjeta SD, jumpers de arranque y primer encendido. | Pendiente |
+| 05 | `05_conectarse.md` | Conexión por red y acceso a Jupyter; qué hacer si no aparece. | Pendiente |
+| 06 | `06_guia_jupyter.md` | Introducción a Jupyter Notebook. Cómo ingresar a el y cómo usarlo | Pendiente |
+| 07 | `07_primer_ejemplo.md` | Correr el primer notebook de punta a punta y entender qué pasó. | Pendiente |
+| 08 | `08_flujo_de_practicas.md` | Organización del trabajo, transferencia de archivos (SFTP/SCP), terminal SSH y flujo Git/GitHub con Pull Requests. | Pendiente |
+| 09 | `09_buenas_practicas.md` | Liberación de memoria CMA/DMA, manejo de kernels, prevención de sobrecalentamiento y limpieza de notebooks en Git. | Pendiente |
 
-La numeración puede ajustarse a medida que se escribe; lo que importa es que el orden de lectura
-quede claro y que cada documento diga con qué hay que seguir.
+La numeración puede ajustarse a medida que se escribe; lo que importa es que el orden de lectura quede claro y que cada documento diga con qué hay que seguir.

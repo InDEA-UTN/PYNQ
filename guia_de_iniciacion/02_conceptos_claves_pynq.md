@@ -31,7 +31,7 @@ En PYNQ, el diseño en la FPGA se maneja como si fuera una librería de software
 Para cargar un Overlay en Python, PYNQ utiliza principalmente dos archivos generados desde Vivado:
 
 1. **`.bit` (Bitstream):** Contiene la configuración binaria que "moldea" las conexiones físicas dentro de la FPGA.
-2. **`.hwh` (Hardware Handshake) o `.tcl`:** Contiene los metadatos del diseño. Le dice a Python qué IP cores existen en el bitstream, en qué direcciones de memoria están asignados y cómo interactuar con ellos.
+2. **`.hwh` (Hardware Handoff) o `.tcl`:** Contiene los metadatos del diseño. Le dice a Python qué IP cores existen en el bitstream, en qué direcciones de memoria están asignados y cómo interactuar con ellos.
 
 ### Carga en Python
 Cuando ejecutás esto en un notebook:

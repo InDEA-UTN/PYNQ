@@ -63,7 +63,7 @@ sequenceDiagram
 
 ### Mensaje de confirmación: Se usa la cadena de texto ACK
 
-### Tolerancia a fallos:  Bucle de reintentos (30 intentos cada 2 segundos) y tiempo de espera de socket (timeout) de 2.0s.
+### Tolerancia a fallos:  Bucle de reintentos (12 intentos cada 5 segundos) y tiempo de espera de socket (timeout) de 2.0s. Si no abris el programa dentro de este bucle de reintentos, tenés que reiniciar la placa.
 
 ## Guia de instalación
 
@@ -86,13 +86,11 @@ sequenceDiagram
         [Service]
         Type=oneshot
         User=xilinx
-        ExecStart=/usr/bin/python3 /home/xilinx/Programa_PNYQ.py
+        ExecStart=/usr/bin/python3 /home/xilinx/Programa_PYNQ.py
 
         [Install]
-        WantedBy=multi-user.target
-        sudo systemctl daemon-reload      
+        WantedBy=multi-user.target     
         ExecStartPre=/bin/sleep 5
-        sudo systemctl enable notificar-ip.service
 
 
 5. Guarda los cambios con CTRL+O, ENTER y sal del editor de textos con CTRL+X
@@ -107,11 +105,11 @@ sequenceDiagram
 Para tener una idea, systemd es el "administrador del sistema" en Linux (el encargado de encender los componentes del sistema operativo en orden). Nosotros creamos un archivo de configuración llamado notificar-ip.service y le dijimos a systemd: 
 #### Cuándo actuar: "Espera a que los servicios de red estén listos (After=network-online.target)".
 
-#### Qué ejecutar: "Corre en segundo plano el comando /usr/bin/python3 /home/xilinx/notificar_ip.py".
+#### Qué ejecutar: "Corre en segundo plano el comando /usr/bin/python3 /home/xilinx/Programa_PYNQ.py".
 
 #### Cómo reaccionar ante errores: "Si falla porque la red todavía no entregó una IP, espera 10 segundos y vuelve a intentarlo (Restart=on-failure)".
 
-Gracias a este daemon, la PYNQ ejecuta tu código en el instante exacto en que arranca Linux.
+Gracias a este daemon, la PYNQ ejecuta el código en el instante exacto en que arranca Linux.
 
 ### Configuración en la PC
 

@@ -1,4 +1,4 @@
-## Cambio de booteo y de alimentacion (v1.0 05/08/2026)
+## Cambio de booteo y de alimentacion (v1.0.1 01/09/2026)
 
 ## 1. Jumper de Arranque (JP1 - Boot Mode)
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 2. Jumper de Alimentación (J9 / JP7 - Power Select)
+## 2. Jumper de Alimentación (J9 - Power Select)
 
 **Ubicación en la placa:** Se encuentra en la esquina inferior izquierda, ubicado justo al lado de la entrada del conector jack de alimentación externa de 5V/12V y del puerto Micro-USB (marcado como PROG/UART).
 

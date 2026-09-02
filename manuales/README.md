@@ -8,7 +8,9 @@ para leerse de corrido.
 
 | Manual | Contenido | Estado |
 |--------|-----------|--------|
-| Cómo cambiar el booteo del PYNQ y su alimentacion |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ |En revisión|
+| cambiar_booteo_y_alimentacion.md |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ. |Disponible|
+| PYNQ_Z2_User_Manual_v1.1.pdf |Manual de usuario de la PYNQ versión 1.1. Obtenido de los foros de PYNQ. Link: https://discuss.pynq.io/t/pynq-z2-raspberry-pi-header/347|Disponible|
+| TUL_PYNQ_Schematic_R12.pdf |Documento que contiene los esquematicos de la PYNQ-Z2. Revisión 2. Obtenido de e-elements. Link: https://www.e-elements.com.tw/en/products-en/xup-pynq/pynq-z2/|Disponible|
 
 ## Qué debe tener un manual
 

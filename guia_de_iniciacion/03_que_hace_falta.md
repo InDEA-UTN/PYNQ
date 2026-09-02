@@ -1,4 +1,4 @@
-# 02. Requisitos Previos: Hardware y Software Necesarios
+# 03. Que hace falta: Hardware y Software Necesarios
 
 Para comenzar a trabajar con la placa **PYNQ-Z2**, es necesario contar con una serie de componentes de hardware y herramientas de software indispensables para su puesta en marcha y configuración inicial.
 
@@ -9,7 +9,7 @@ Para comenzar a trabajar con la placa **PYNQ-Z2**, es necesario contar con una s
 ### Placa y Alimentación
 * **Placa de desarrollo PYNQ-Z2** (TUL Corporation).
 * **Fuente de alimentación de 5V DC / 3A (Plug DC 2.1mm):** 
-  * *Nota:* La placa se puede alimentar vía Micro-USB (poniendo el jumper `JP7` en posición `USB`), pero para cargas de trabajo exigentes o uso de periféricos en los puertos USB Host/HDMI, se recomienda usar una fuente externa dedicada de 5V por el conector jack DC (jumper `JP7` en posición `REG`).
+  * *Nota:* La placa se puede alimentar vía Micro-USB (poniendo el jumper `J9` en posición `USB`), pero para cargas de trabajo exigentes o uso de periféricos en los puertos USB Host/HDMI, se recomienda usar una fuente externa dedicada de 5V por el conector jack DC (jumper `J9` en posición `REG`).
 
 ### Almacenamiento y Conectividad
 * **Tarjeta MicroSD (Mínimo 16 GB, Clase 10 / UHS-I recomendada):**
