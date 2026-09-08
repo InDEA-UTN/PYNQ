@@ -8,18 +8,23 @@ def iniciar_servidor_udp():
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((HOST, PUERTO))
-        print(f"[*] Escuchando notificaciones de la PYNQ...")
+        print("[*] Escuchando notificaciones de la PYNQ-Z2...")
         
         while True:
             datos, (ip_origen, puerto_origen) = s.recvfrom(1024)
-            mensaje = datos.decode('utf-8')
+            # Decodificar el mensaje enviado por la placa
+            mensaje = datos.decode('utf-8', errors='ignore').strip()
             
-            # Responder ACK directamente a la IP y PUERTO desde el que la PYNQ envió el mensaje
+            # 1. Enviar confirmación ACK a la placa
             s.sendto(b"ACK", (ip_origen, puerto_origen))
             
-            # Notificación en Ubuntu
-            os.system(f'notify-send "PYNQ-Z2 Conectada" "IP: {ip_origen}\nAcceso: http://{ip_origen}:9090" --icon=network-workgroup')
-            print(f"[!] IP Recibida: {ip_origen}. Confirmación enviada.")
+            # 2. Imprimir en consola el mensaje recibido
+            print("\n" + "="*50)
+            print(f"[!] {mensaje}")
+            print("="*50 + "\n")
+            
+            # 3. Mostrar notificación emergente usando el mensaje parseado de la PYNQ
+            os.system(f'notify-send "PYNQ-Z2 Conectada" "{mensaje}" --icon=network-workgroup')
 
 if __name__ == "__main__":
     iniciar_servidor_udp()
