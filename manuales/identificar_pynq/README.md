@@ -1,6 +1,6 @@
 # Programa para encontrar y acceder a la PYNQ
 
-Este programa se realizó con el objetivo de encontrar la direccion IP que le otorga el servicio DHCP del router a la PYNQ-Z2 en un entorno donde no se puede acceder al router ni al PYNQ mediante Serial y conectarse al dispositivo. 
+Este programa se realizó con el objetivo de encontrar la direccion IP que le otorga el servicio DHCP del router a la PYNQ-Z2 en un entorno donde no se puede acceder al router ni al PYNQ mediante Serial. 
 
 
 ## Requisitos

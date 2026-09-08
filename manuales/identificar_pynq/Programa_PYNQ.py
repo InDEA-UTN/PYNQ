@@ -4,49 +4,43 @@ import time
 PUERTO = 5005
 BROADCAST_IP = '<broadcast>'
 
-def obtener_ip_local():
-    """Obtiene la IP local sin requerir salida a Internet ni consultar servidores externos."""
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        # Apunta a la dirección de broadcast local 
-        s.connect(('255.255.255.255', 1))
-        ip = s.getsockname()[0]
-        s.close()
-        if not ip.startswith('127.'):
-            return ip
-    except Exception:
-        pass
-    return None
-
 def notificar_con_confirmacion():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    s.settimeout(2.0)  # Espera máximo 2 segundos por respuesta
+    s.settimeout(2.0)
 
     for intento in range(30):
-        # 1. Obtener la IP local de forma segura dentro del bucle
-        ip_placa = obtener_ip_local()
-        
-        # Si la red aún no asignó una IP, esperar y reintentar
-        if not ip_placa:
-            time.sleep(2)
-            continue
-
-        mensaje = f"Placa PYNQ-Z2 lista. Acceso: http://{ip_placa}:9090"
-
         try:
+            # 1. Obtenemos el nombre del host o la IP asignada
+            ip_placa = None
+            try:
+                ip_placa = socket.gethostbyname(socket.gethostname())
+            except Exception:
+                pass
+            
+            # Si gethostbyname devuelve loopback, usamos un mensaje genérico temporal
+            if not ip_placa or ip_placa.startswith('127.'):
+                # Forzamos un socket para ver la IP de la interfaz
+                aux = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                aux.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+                aux.connect(('10.255.255.255', 1)) # IP privada genérica
+                ip_placa = aux.getsockname()[0]
+                aux.close()
+
+            mensaje = f"Placa PYNQ-Z2 lista. Acceso: http://{ip_placa}:9090"
+            print(f"[Intento {intento+1}] IP detectada: {ip_placa}. Enviando...")
+
             # 2. Enviar Broadcast
             s.sendto(mensaje.encode('utf-8'), (BROADCAST_IP, PUERTO))
             
-            # 3. Esperar confirmación de la PC
+            # 3. Esperar confirmación ACK
             respuesta, addr = s.recvfrom(1024)
-            
-            # Verificación flexible de la respuesta ACK
             if "ACK" in respuesta.decode('utf-8', errors='ignore').upper():
-                print("La PC confirmó la recepción. Deteniendo envíos.")
+                print(f" -> Confirmación recibida desde {addr}. Deteniendo envíos.")
                 break
-        except (socket.timeout, OSError):
-            # Si la PC no responde o la interfaz de red está negociando, reintentar
+
+        except (socket.timeout, OSError) as e:
+            print(f" -> Reintentando ({e})...")
             time.sleep(2)
 
     s.close()
