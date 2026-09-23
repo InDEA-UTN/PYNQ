@@ -63,7 +63,7 @@ sequenceDiagram
 
 ### Mensaje de confirmación: Se usa la cadena de texto ACK
 
-### Tolerancia a fallos:  Bucle de reintentos (12 intentos cada 5 segundos) y tiempo de espera de socket (timeout) de 2.0s. Si no abris el programa dentro de este bucle de reintentos, tenés que reiniciar la placa.
+### Tolerancia a fallos:  Bucle de reintentos (30 intentos cada 2 segundos) y tiempo de espera de socket (timeout) de 2.0s. Si no abris el programa dentro de este bucle de reintentos, tenés que reiniciar la placa.
 
 ## Guia de instalación
 
@@ -86,14 +86,18 @@ sequenceDiagram
         [Service]
         Type=oneshot
         User=xilinx
+        RemainAfterExit=yes
+        ExecStartPre=/bin/sleep 5
         ExecStart=/usr/bin/python3 /home/xilinx/Programa_PYNQ.py
+        Restart=on-failure
+        RestartSec=10s
 
         [Install]
         WantedBy=multi-user.target     
-        ExecStartPre=/bin/sleep 5
 
 
-5. Guarda los cambios con CTRL+O, ENTER y sal del editor de textos con CTRL+X
+
+5. Guardá los cambios con CTRL+O, ENTER y salí del editor de textos con CTRL+X
 
 
 6. Crea y habilita el servicio con los siguientes comandos en consola: 

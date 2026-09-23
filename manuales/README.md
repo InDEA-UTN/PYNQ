@@ -8,9 +8,10 @@ para leerse de corrido.
 
 | Manual | Contenido | Estado |
 |--------|-----------|--------|
-| cambiar_booteo_y_alimentacion.md |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ. |Disponible|
-| PYNQ_Z2_User_Manual_v1.1.pdf |Manual de usuario de la PYNQ versión 1.1. Obtenido de los foros de PYNQ. Link: https://discuss.pynq.io/t/pynq-z2-raspberry-pi-header/347|Disponible|
-| TUL_PYNQ_Schematic_R12.pdf |Documento que contiene los esquematicos de la PYNQ-Z2. Revisión 2. Obtenido de e-elements. Link: https://www.e-elements.com.tw/en/products-en/xup-pynq/pynq-z2/|Disponible|
+|[identificar_pynq/](./identificar_pynq/)| Es la carpeta del programa realizado en el laboratorio para identificar la PYNQ. Contiene la build mas reciente y el código fuente para compilar en PC y en la PYNQ | Disponible |
+| [cambiar_booteo_y_alimentacion.md](./cambiar_booteo_y_alimentacion.md)  |Indica como cambiar el modo de arranque y el modo de alimentacion del PYNQ. | Disponible |
+| [PYNQ_Z2_User_Manual_v1.1.pdf](./PYNQ_Z2_User_Manual_v1.1.pdf) |Manual de usuario de la PYNQ versión 1.1. Obtenido de los foros de PYNQ. Link: https://discuss.pynq.io/t/pynq-z2-raspberry-pi-header/347| Disponible |
+| [TUL_PYNQ_Schematic_R12.pdf](./TUL_PYNQ_Schematic_R12.pdf) |Documento que contiene los esquematicos de la PYNQ-Z2. Revisión 2. Obtenido de e-elements. Link: https://www.e-elements.com.tw/en/products-en/xup-pynq/pynq-z2/| Disponible |
 
 ## Qué debe tener un manual
 
